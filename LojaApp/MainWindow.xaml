@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Cadastros" >
+                <MenuItem Header="Fabricantes... " Click="CadFabricantesClick" />
+                <MenuItem Header="Veículos..." Click="CadVeiculosClick"/>
+                <Separator/>
+                <MenuItem Header="Sair" Click="SairClick"/>
+            </MenuItem>
+            <MenuItem Header="Consultas">
+                <MenuItem Header="Veículos Disponíveis..." Click="ConsVeiculosClick"/>
+            </MenuItem>
+        </Menu>
     </Grid>
+    
 </Window>

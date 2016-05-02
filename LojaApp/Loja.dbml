@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Concessionaria" Class="LojaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=./;Initial Catalog=Concessionaria;User ID=sa" SettingsObjectName="LojaApp.Properties.Settings" SettingsPropertyName="ConcessionariaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Fabricante" Member="Fabricantes">
+    <Type Name="Fabricante">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Fabricante_Veiculo" Member="Veiculos" ThisKey="id" OtherKey="idFabricante" Type="Veiculo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Veiculo" Member="Veiculos">
+    <Type Name="Veiculo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Modelo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ano" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idFabricante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataCompra" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ValorCompra" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PrecoVenda" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DataVenda" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ValorVenda" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Fabricante_Veiculo" Member="Fabricante" ThisKey="idFabricante" OtherKey="id" Type="Fabricante" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
