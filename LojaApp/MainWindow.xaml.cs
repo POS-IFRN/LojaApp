@@ -24,5 +24,28 @@ namespace LojaApp
         {
             InitializeComponent();
         }
+
+        private void CadFabricantesClick(object sender, RoutedEventArgs e)
+        {
+            var abrir = new CadastroFabricantes();
+            abrir.Show();
+        }
+
+        private void CadVeiculosClick(object sender, RoutedEventArgs e)
+        {
+            var abrir = new WndCadVeiculo();
+            abrir.Show();
+        }
+
+        private void ConsVeiculosClick(object sender, RoutedEventArgs e)
+        {
+            var abrir = new WndConsVeiculo();
+            abrir.Show();
+        }
+
+        private void SairClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -14,11 +14,11 @@
                 
                 <Button x:Name="buttonSelect" Content="Select" HorizontalAlignment="Left" Margin="266,22,0,0" VerticalAlignment="Top" Width="75" Click="buttonSelect_Click"/>
                 
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
-                <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="46,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="buttonUpdate" Content="Update" HorizontalAlignment="Left" Margin="346,22,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="426,22,0,0" VerticalAlignment="Top" Width="75"/>
-                <Button x:Name="buttonInsert" Content="Insert" HorizontalAlignment="Left" Margin="186,22,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="23" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+                <TextBox x:Name="textBoxDescricao" HorizontalAlignment="Left" Height="23" Margin="46,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="buttonUpdate" Content="Update" HorizontalAlignment="Left" Margin="346,22,0,0" VerticalAlignment="Top" Width="75" Click="buttonUpdate_Click"/>
+                <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="426,22,0,0" VerticalAlignment="Top" Width="75" Click="buttonDelete_Click"/>
+                <Button x:Name="buttonInsert" Content="Insert" HorizontalAlignment="Left" Margin="186,22,0,0" VerticalAlignment="Top" Width="75" Click="buttonInsert_Click"/>
 
             </Grid>
         </GroupBox>

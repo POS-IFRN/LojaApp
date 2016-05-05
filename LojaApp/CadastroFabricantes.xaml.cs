@@ -24,10 +24,47 @@ namespace LojaApp
             InitializeComponent();
         }
 
+        private LojaDataContext dc = new LojaDataContext();
+
         private void buttonSelect_Click(object sender, RoutedEventArgs e)
         {
-            LojaDataContext dc = new LojaDataContext();
             dataGrid.ItemsSource = (from f in dc.Fabricantes select f);
+        }
+
+        private void buttonInsert_Click(object sender, RoutedEventArgs e)
+        {
+            Fabricante f = new Fabricante();
+            f.id = int.Parse(textBoxID.Text);
+            f.Descricao = textBoxDescricao.Text;
+            dc.Fabricantes.InsertOnSubmit(f);
+            dc.SubmitChanges();
+        }
+
+        private void buttonUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Fabricante r = (from f in dc.Fabricantes
+                            where f.id == int.Parse(textBoxID.Text)
+                            select f).Single();
+            r.Descricao = textBoxDescricao.Text;
+            dc.SubmitChanges();
+        }
+
+        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Fabricante r = (from f in dc.Fabricantes
+                            where f.id == int.Parse(textBoxID.Text)
+                            select f).Single();
+            deleteChilds(r.id);
+            dc.Fabricantes.DeleteOnSubmit(r);
+            dc.SubmitChanges();
+        }
+
+        private void deleteChilds(int id)
+        {
+            var carrosdofabricanteQuery = (from v in dc.Veiculos
+                                           where v.Fabricante.id == id
+                                           select v);
+            foreach (var carro in carrosdofabricanteQuery) dc.Veiculos.DeleteOnSubmit(carro);
         }
     }
 }

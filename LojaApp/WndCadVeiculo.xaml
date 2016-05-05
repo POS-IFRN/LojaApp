@@ -1,0 +1,34 @@
+﻿<Window x:Class="LojaApp.WndCadVeiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LojaApp"
+        mc:Ignorable="d"
+        Title="Cadastro de Veículos" Height="332.71" Width="643.925" Activated="Window_Activated">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Veículo" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="83" Width="626"/>
+        <Grid>
+            <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="85" Click="btnInsert_Click"/>
+            <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" Margin="95,64,0,0" VerticalAlignment="Top" Width="85" Click="btnSelect_Click"/>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="180,64,0,0" VerticalAlignment="Top" Width="85" Click="btnUpdate_Click"/>
+            <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="265,64,0,0" VerticalAlignment="Top" Width="85" Click="btnDelete_Click"/>
+            <TextBox x:Name="textboxId" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top"/>
+            <TextBox x:Name="textboxModelo" HorizontalAlignment="Left" Height="23" Margin="95,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+            <TextBox x:Name="textboxAno" HorizontalAlignment="Left" Height="23" Margin="180,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+            <ComboBox x:Name="cbFab" HorizontalAlignment="Left" Margin="265,41,0,0" VerticalAlignment="Top" Width="85" Height="23"/>
+            <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="95,25,0,0" TextWrapping="Wrap" Text="Modelo" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="180,25,0,0" TextWrapping="Wrap" Text="Ano" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="265,25,0,0" TextWrapping="Wrap" Text="Fabricante" VerticalAlignment="Top"/>
+            <DatePicker x:Name="dpDataCompra" HorizontalAlignment="Left" Margin="350,41,0,0" VerticalAlignment="Top" Width="85" Height="23"/>
+            <TextBox x:Name="textboxVCompra" HorizontalAlignment="Left" Height="23" Margin="435,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+            <TextBox x:Name="textboxPVenda" HorizontalAlignment="Left" Height="23" Margin="520,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Height="203" Width="616"/>
+            <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="435,25,0,0" TextWrapping="Wrap" Text="Valor Compra" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="520,25,0,0" TextWrapping="Wrap" Text="Preço Venda" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="350,25,0,0" TextWrapping="Wrap" Text="Valor Compra" VerticalAlignment="Top"/>
+
+        </Grid>
+    </Grid>
+</Window>
