@@ -2,17 +2,17 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=./;Initial Catalog=Concessionaria;User ID=sa" SettingsObjectName="LojaApp.Properties.Settings" SettingsPropertyName="ConcessionariaConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Fabricante" Member="Fabricantes">
     <Type Name="Fabricante">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Descricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Fabricante_Veiculo" Member="Veiculos" ThisKey="id" OtherKey="idFabricante" Type="Veiculo" />
     </Type>
   </Table>
   <Table Name="dbo.Veiculo" Member="Veiculos">
     <Type Name="Veiculo">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Modelo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Ano" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idFabricante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idFabricante" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DataCompra" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ValorCompra" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="PrecoVenda" Type="System.Decimal" DbType="Money" CanBeNull="true" />

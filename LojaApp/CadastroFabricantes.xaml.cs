@@ -36,8 +36,17 @@ namespace LojaApp
             Fabricante f = new Fabricante();
             f.id = int.Parse(textBoxID.Text);
             f.Descricao = textBoxDescricao.Text;
-            dc.Fabricantes.InsertOnSubmit(f);
-            dc.SubmitChanges();
+            
+            try
+            {
+                dc.Fabricantes.InsertOnSubmit(f);
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
         }
 
         private void buttonUpdate_Click(object sender, RoutedEventArgs e)

@@ -113,7 +113,7 @@ namespace LojaApp
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int id
 		{
 			get
@@ -209,9 +209,9 @@ namespace LojaApp
 		
 		private string _Modelo;
 		
-		private int _Ano;
+		private System.Nullable<int> _Ano;
 		
-		private int _idFabricante;
+		private System.Nullable<int> _idFabricante;
 		
 		private System.Nullable<System.DateTime> _DataCompra;
 		
@@ -233,9 +233,9 @@ namespace LojaApp
     partial void OnidChanged();
     partial void OnModeloChanging(string value);
     partial void OnModeloChanged();
-    partial void OnAnoChanging(int value);
+    partial void OnAnoChanging(System.Nullable<int> value);
     partial void OnAnoChanged();
-    partial void OnidFabricanteChanging(int value);
+    partial void OnidFabricanteChanging(System.Nullable<int> value);
     partial void OnidFabricanteChanged();
     partial void OnDataCompraChanging(System.Nullable<System.DateTime> value);
     partial void OnDataCompraChanged();
@@ -255,7 +255,7 @@ namespace LojaApp
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int id
 		{
 			get
@@ -295,8 +295,8 @@ namespace LojaApp
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ano", DbType="Int NOT NULL")]
-		public int Ano
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ano", DbType="Int")]
+		public System.Nullable<int> Ano
 		{
 			get
 			{
@@ -315,8 +315,8 @@ namespace LojaApp
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idFabricante", DbType="Int NOT NULL")]
-		public int idFabricante
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idFabricante", DbType="Int")]
+		public System.Nullable<int> idFabricante
 		{
 			get
 			{
@@ -466,7 +466,7 @@ namespace LojaApp
 					}
 					else
 					{
-						this._idFabricante = default(int);
+						this._idFabricante = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Fabricante");
 				}
